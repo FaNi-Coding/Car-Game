@@ -11,27 +11,27 @@ const startGame = function () {
 
      startPageBlock.style.display = 'none';
      let gamePageBlock = document.createElement('section');
-     let car = document.createElement('span');
+     let car = document.createElement('p');
      car.id = 'car-1';
      gamePageBlock.id = 'gamePage';
      gamePageBlock.classList.add('game-page');
      car.classList.add('car');
      mainPage.appendChild(gamePageBlock);
      gamePageBlock.appendChild(car);
-     gamePageBlock.addEventListener('keypress', carController);
+     document.addEventListener('keydown', carController);
 }
 
-
-
-const carController = function (e) {
-     console.log(e.keyCode);
-     if (e.keyCode === 37) {
+// move car by arrows
+const carController = function (event) {
+     let car = document.querySelector('#car-1');
+     if (event.keyCode === 37) {
           car.style.left = car.offsetLeft - 10 + 'px';
-     } else if (e.keyCode === 39) {
+     } else if (event.keyCode === 39) {
           car.style.left = car.offsetLeft + 10 + 'px';
-     } else if (e.keyCode === 38) {
+     }
+     else if (event.keyCode === 38) {
           car.style.top = car.offsetTop - 10 + 'px';
-     } else if (e.keyCode === 40) {
+     } else if (event.keyCode === 40) {
           car.style.top = car.offsetTop + 10 + 'px';
      }
 }
