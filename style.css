@@ -2,7 +2,9 @@
   padding: 0;
   margin: 0;
 }
-
+.d-none{
+  display: node;
+}
 body {
   background-color: rgb(73, 75, 77);
   box-sizing: border-box;
@@ -43,4 +45,20 @@ main {
   border-radius: 16px;
   padding: 20px 30px;
   box-shadow: 1px 5px 9px 5px rgba(0, 0, 0, 0);
+}
+
+.game-page {
+  width:500px;
+  height:500px;
+  background-color: rgb(87, 92, 92);
+  position:relative;
+}
+
+.car {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top:10px;
+  left:10px;
 }
